@@ -1,9 +1,9 @@
 {
-    "name": "phpkit/weixinapi",
-    "description": "the new thinkphp framework",
+    "name": "phpkit/synclogin",
+    "description": "第三方同步登录",
     "type": "project",
     "keywords": [
-        "weixin"
+        "synclogin"
     ],
     "homepage": "http://www.phpkit.me/",
     "license": "Apache-2.0",
@@ -18,7 +18,7 @@
     },
      "autoload": {
         "psr-4": {
-            "phpkit\\weixinapi\\": "src/"
+            "phpkit\\synclogin\\": "src/"
         }
     }
 }
