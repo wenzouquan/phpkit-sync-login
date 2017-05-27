@@ -1,7 +1,6 @@
 {
     "name": "phpkit/synclogin",
     "description": "QQ 微信 新腾 github 淘宝 10多种登录方式",
-    "type": "project",
     "keywords": [
         "synclogin"
     ],
