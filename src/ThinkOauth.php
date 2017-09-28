@@ -111,19 +111,27 @@ abstract class ThinkOauth {
 	/**
 	 * 初始化配置
 	 */
-	public function config($config) {
+	public function config($config) { 
+		//var_dump($config);
+		if($config){
+			$this->config = $config;
+		}else{
+			$config=$this->config;
+		}
 		$class = get_class($this);
 		$this->Type = strtoupper(substr($class, 0, strlen($class) - 3));
 		$type = substr($class, 0, strlen($class) - 3);
 		if (empty($config[$type . 'KEY']) || empty($config[$type . 'Secret'])) {
 			throw new \Exception('请配置您申请的APP_KEY和APP_SECRET');
 		} else {
-
 			$this->AppKey = $config[$type . 'KEY'];
 			$this->AppSecret = $config[$type . 'Secret'];
 			$this->Token = $token; //设置获取到的TOKEN
 		}
 		$this->Callback = $config['callbackUrl'];
+		// 	var_dump($type);
+		// var_dump($config);
+		// exit();
 		return $this;
 	}
 
@@ -171,6 +179,7 @@ abstract class ThinkOauth {
 	 * 请求code
 	 */
 	public function getRequestCodeURL() {
+
 		//Oauth 标准参数
 		$params = array(
 			'client_id' => $this->AppKey,

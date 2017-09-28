@@ -30,7 +30,7 @@ class WeixinSDK extends phpkit\synclogin\ThinkOauth {
 	 */
 	protected $ApiBase = 'https://api.weixin.qq.com/';
 
-	public function getRequestCodeURL() {
+	public function getRequestCodeURL() { 
 		$this->config();
 		$params = array(
 			'appid' => $this->AppKey,
